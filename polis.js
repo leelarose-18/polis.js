@@ -318,7 +318,7 @@ var responseObject='';
 
 function recommendTV() {
     return ({
-        speech: "Here are some recommendations for tonight",
+        speech: " Hello Here are some recommendations for tonight",
         displayText: "TV recommendations",
         data: {
             "facebook": {
@@ -389,7 +389,7 @@ function recommendTV() {
 
 function pgmDetails() {
     return ({
-        speech: "Here are some recommendations for tonight",
+        speech: "Hello Here are some recommendations for tonight",
         displayText: "TV recommendations",
         data: {
             "facebook": {
