@@ -166,9 +166,10 @@ var respstr ='Your recording for ' + apireq.body.result.parameters.Programs +' s
 function upsell(apireq) {
 	
 //var respstr ='Congrats, Now you are subscribed for ' + apireq.body.result.parameters.Channel +" Channel.  Now  I can help you with  TV Recommendations or Recording a program. What would you like to do?" ;
-var respstr ='Alright!Music always heals ur pain. Its a great relief.I will list you some songs in my playlist.1.Hometown Glory, Adele 2.My Immortal, Evanescence 3.I Cant See Nobody, Nina Simone 4.Young and Beautiful, Lana Del Ray 5.Eet, Regina Spektor 6.Eleanor, Rigby 7.The Beatles 8.The Call ,Regina Spektor 9.Apologize, OneRepublic 10.I Will Remember You, Sarah McLachlan 11.I Will Always Love You 12.Whitney Houston 13.How to Save a Life, The Fray 14.A Candle in the Wind: A Princess Diana Tribute, Elton John'; 
+var respstr ='Alright!Music always heals ur pain. Its a great relief.';
+var respstr1='I will list you some songs in my playlist.1.Hometown Glory, Adele 2.My Immortal, Evanescence 3.I Cant See Nobody, Nina Simone 4.Young and Beautiful, Lana Del Ray 5.Eet, Regina Spektor 6.Eleanor, Rigby 7.The Beatles 8.The Call ,Regina Spektor 9.Apologize, OneRepublic 10.I Will Remember You, Sarah McLachlan 11.I Will Always Love You 12.Whitney Houston 13.How to Save a Life, The Fray 14.A Candle in the Wind: A Princess Diana Tribute, Elton John'; 
     return ({
-        speech: respstr ,
+        speech: respstr ,respstr1,
         displayText: "TV Recommendations",
         data: {
             "facebook": {
