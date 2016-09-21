@@ -204,7 +204,7 @@ var respstr1='I will list you some songs in my playlist.1.Hometown Glory, Adele 
                     "type": "template",
                     "payload": {
                         "template_type": "button",
-                        "text": respstr,
+                        "text": respstr1,
                         "buttons": [
                             {
                                 "type": "postback",
