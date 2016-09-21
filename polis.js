@@ -169,7 +169,34 @@ function upsell(apireq) {
 var respstr ='Alright!Music always heals ur pain. Its a great relief.';
 var respstr1='I will list you some songs in my playlist.1.Hometown Glory, Adele 2.My Immortal, Evanescence 3.I Cant See Nobody, Nina Simone 4.Young and Beautiful, Lana Del Ray 5.Eet, Regina Spektor 6.Eleanor, Rigby 7.The Beatles 8.The Call ,Regina Spektor 9.Apologize, OneRepublic 10.I Will Remember You, Sarah McLachlan 11.I Will Always Love You 12.Whitney Houston 13.How to Save a Life, The Fray 14.A Candle in the Wind: A Princess Diana Tribute, Elton John'; 
     return ({
-        speech: respstr ,respstr1,
+        speech: respstr ,
+        displayText: "TV Recommendations",
+        data: {
+            "facebook": {
+                "attachment": {
+                    "type": "template",
+                    "payload": {
+                        "template_type": "button",
+                        "text": respstr,
+                        "buttons": [
+                            {
+                                "type": "postback",
+                                "title": "TV Recommendations",
+                                "payload": "Yes"
+                            },
+                            {
+                                "type": "postback",
+                                "title": "Record",
+                                "payload": "I want to record"
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        source: "Zero Service - app_zero.js"
+    },{
+        speech: respstr1 ,
         displayText: "TV Recommendations",
         data: {
             "facebook": {
