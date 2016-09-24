@@ -20,6 +20,9 @@ router.post('/webhook', function (req, res) {
         case "welcome":
              res.json(chatInitiate());
             break;
+        case "welcome1":
+        	res.json(chatInitiate1('start'));
+        	break;
         case "Billing":
             res.json(billInquiry());
             break;
@@ -73,7 +76,15 @@ function recommendTVNew(callback) {
          source: "Zero Service - app_zero.js" 
      }); 
  } 
-
+function chatInitiate1(apiresp) { 
+ 	   var jsonresp = JSON.parse(apiresp);
+     return ({ 
+	         speech: " welcome to VZ.com", 
+         displayText: "TV recommendations", 
+         data:  jsonresp, 
+         source: "Zero Service - app_zero.js" 
+     }); 
+ } 
 
 
 
