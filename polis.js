@@ -10,6 +10,8 @@ var PORT = process.env.PORT || 9000;
 
 var router = express.Router(); 
 
+
+
 router.post('/webhook', function (req, res) {
 //app.post('/webhook', function (req, res) {
   //var intent = req.body.result.metadata.intentName;
@@ -76,15 +78,7 @@ function recommendTVNew(callback) {
          source: "Zero Service - app_zero.js" 
      }); 
  } 
-function chatInitiate1(apiresp) { 
- 	   var jsonresp = JSON.parse(apiresp);
-     return ({ 
-	         speech: " welcome to VZ.com", 
-         displayText: "TV recommendations", 
-         data:  jsonresp, 
-         source: "Zero Service - app_zero.js" 
-     }); 
- } 
+
 
 
 
@@ -496,6 +490,39 @@ function pgmDetails() {
         source: "Zero Service - app_zero.js"
     });
 }
+
+function chatInitiate1(apiresp) {
+    return ({
+        speech: "welcome",
+        displayText: "TV Recommendations",
+        data: {
+            "facebook": {
+                "attachment": {
+                    "type": "template",
+                    "payload": {
+                        "template_type": "button",
+                        "text": "Hi, I am Verizon Entertainment bot.  I can help you with  TV Recommendations or Recording a program. What would you like to do?",
+                        "buttons": [
+                            {
+                                "type": "postback",
+                                "title": "TV Recommendations",
+                                "payload": "Yes"
+                            },
+                            {
+                                "type": "postback",
+                                "title": "Record",
+                                "payload": "I want to record"
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        source: "Zero Service - app_zero.js"
+    });
+}
+
+
 function chatInitiate() {
     return ({
         speech: "Hi, I am Verizon Entertainment bot.  I can help you with  TV Recommendations or Recording a program. What would you like to do?",
