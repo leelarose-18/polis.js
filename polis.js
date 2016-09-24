@@ -21,12 +21,16 @@ var router = express.Router();
 	break;
 });*/
 
-res.json(chatInitiate1('start'));
+
 
 router.post('/webhook', function (req,res) {
 //app.post('/webhook', function (req, res) {
   //var intent = req.body.result.metadata.intentName;
   //req='start';
+  if(req==null)
+  {res.json(chatInitiate1('start'));}
+  else
+  {
   var intent = req.body.result.action;
   var mysource = req.body.result.source;
  console.log('Calling from :' + mysource) ;
@@ -60,7 +64,7 @@ router.post('/webhook', function (req,res) {
             break;
         default:
             res.json(recommendTV());
-    }
+    }}
 });
 
 
