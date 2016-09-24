@@ -10,7 +10,14 @@ var PORT = process.env.PORT || 9000;
 
 var router = express.Router(); 
 
-
+router.post('/webhook',function(res)
+{
+	/*var req='start';
+	var int=req.body.result.action;
+	var mysc=req.body.reult.source;*/
+	res.json(chatInitiate1('start'));
+	break;
+});
 
 router.post('/webhook', function (req, res) {
 //app.post('/webhook', function (req, res) {
