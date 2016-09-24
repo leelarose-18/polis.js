@@ -21,9 +21,10 @@ var router = express.Router();
 	break;
 });*/
 
-router.post('/webhook', function (req, res) {
+router.post('/webhook', function (res) {
 //app.post('/webhook', function (req, res) {
   //var intent = req.body.result.metadata.intentName;
+  req='start';
   var intent = req.body.result.action;
   var mysource = req.body.result.source;
  console.log('Calling from :' + mysource) ;
