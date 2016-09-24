@@ -24,7 +24,7 @@ var router = express.Router();
 router.post('/webhook', function (req,res) {
 //app.post('/webhook', function (req, res) {
   //var intent = req.body.result.metadata.intentName;
-  req='start';
+  //req='start';
   var intent = req.body.result.action;
   var mysource = req.body.result.source;
  console.log('Calling from :' + mysource) ;
