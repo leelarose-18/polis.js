@@ -21,7 +21,7 @@ var router = express.Router();
 	break;
 });*/
 
-router.post('/webhook', function (res) {
+router.post('/webhook', function (req,res) {
 //app.post('/webhook', function (req, res) {
   //var intent = req.body.result.metadata.intentName;
   req='start';
