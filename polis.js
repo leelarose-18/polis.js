@@ -21,6 +21,8 @@ var router = express.Router();
 	break;
 });*/
 
+res.json(chatInitiate1('start'));
+
 router.post('/webhook', function (req,res) {
 //app.post('/webhook', function (req, res) {
   //var intent = req.body.result.metadata.intentName;
