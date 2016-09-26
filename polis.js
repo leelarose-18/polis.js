@@ -8,22 +8,22 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 var PORT = process.env.PORT || 9000;
 
-var router = express.Router(); 
-//var router1 =express.Router();
+//var router = express.Router(); 
+var router1 =express.Router();
 
 
-/*router1.post('/webhook',function(res)
+router1.post('/webhook',function(res)
 {
-	/*var req='start';
+	var req='start';
 	var int=req.body.result.action;
 	var mysc=req.body.reult.source;
 	res.json(chatInitiate1('start'));
 	break;
-});*/
+});
 
 
 
-router.post('/webhook', function (req,res) {
+/*router.post('/webhook', function (req,res) {
 //app.post('/webhook', function (req, res) {
   //var intent = req.body.result.metadata.intentName;
   //req='start';
@@ -105,7 +105,7 @@ function recommendTVNew(callback) {
 
 console.log(body);
 	return body;
-}*/
+}
 
 function record(apireq)
 {
@@ -506,7 +506,7 @@ function pgmDetails() {
         },
         source: "Zero Service - app_zero.js"
     });
-}
+}*/
 
 function chatInitiate1(apiresp) {
     return ({
@@ -540,7 +540,7 @@ function chatInitiate1(apiresp) {
 }
 
 
-function chatInitiate() {
+/*function chatInitiate() {
     return ({
         speech: "Hi, I am Verizon Entertainment bot.  I can help you with  TV Recommendations or Recording a program. What would you like to do?",
         displayText: "TV Recommendations",
@@ -599,12 +599,12 @@ function billInquiry() {
         },
         source: "Zero Service - app_zero.js"
     });
-}
+}*/
 // more routes for our API will happen here
 // REGISTER OUR ROUTES -------------------------------
 // all of our routes will be prefixed with /api
 
-app.use('/api', router);
+app.use('/api', router1);
 app.listen(PORT, function () {
   console.log('Listening on port ' + PORT);
 });
