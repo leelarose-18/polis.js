@@ -17,6 +17,7 @@ router1.post('/webhook',function(res)
 	var req='start';
 	var int=req.body.result.action;
 	var mysc=req.body.reult.source;
+	if(req=='start')
 	res.json(chatInitiate1('start'));
 	break;
 });
