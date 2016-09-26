@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 var PORT = process.env.PORT || 9000;
 
 var router = express.Router(); 
-var router1 =express.Router();
+/*var router1 =express.Router();
 
 
 router1.post('/webhook',function(res)
@@ -20,16 +20,18 @@ router1.post('/webhook',function(res)
 	if(req=='start')
 	res.json(chatInitiate1('start'));
 	break;
-});
+});*/
 
+var f=0;
 
-
-router.post('/webhook', function (req,res) {
+router.post('/webhook', function (req,res,f) {
 //app.post('/webhook', function (req, res) {
   //var intent = req.body.result.metadata.intentName;
   //req='start';
-  if(req==null)
-  {res.json(chatInitiate1('start'));}
+	
+  if(f==0)
+  {res.json(chatInitiate1('start'));
+  f=1;}
   else
   {
   var intent = req.body.result.action;
