@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 var PORT = process.env.PORT || 9000;
 
-//var router = express.Router(); 
+var router = express.Router(); 
 var router1 =express.Router();
 
 
@@ -24,7 +24,7 @@ router1.post('/webhook',function(res)
 
 
 
-/*router.post('/webhook', function (req,res) {
+router.post('/webhook', function (req,res) {
 //app.post('/webhook', function (req, res) {
   //var intent = req.body.result.metadata.intentName;
   //req='start';
@@ -100,7 +100,7 @@ function recommendTVNew(callback) {
 
 
 
-/*function callback(body)
+function callback(body)
 {
 	console.log("inside callback ");
 
@@ -507,7 +507,7 @@ function pgmDetails() {
         },
         source: "Zero Service - app_zero.js"
     });
-}*/
+}
 
 function chatInitiate1(apiresp) {
     return ({
@@ -600,7 +600,7 @@ function billInquiry() {
         },
         source: "Zero Service - app_zero.js"
     });
-}*/
+}
 // more routes for our API will happen here
 // REGISTER OUR ROUTES -------------------------------
 // all of our routes will be prefixed with /api
