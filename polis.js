@@ -36,8 +36,8 @@ router.post('/webhook', function (req,res) {
  console.log('Calling from :' + mysource) ;
     switch (intent) {
         case "welcome":
-             //res.json(chatInitiate());
-		    res.json(billInquiry());
+             res.json(chatInitiate());
+ 	     res.json(billInquiry());
             break;
         case "welcome1":
         	res.json(chatInitiate1('start'));
