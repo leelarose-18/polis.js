@@ -54,7 +54,7 @@
 	        default:
 	            res.json(recommendTV());
 	    }}
-	});
+	}
 	
 	
 	
