@@ -16,6 +16,10 @@
 	router.post('/webhook', function (req, res) {
 	//app.post('/webhook', function (req, res) {
 	  //var intent = req.body.result.metadata.intentName;
+		
+		res.writeHead(200, {"Content-Type": "text/plain"});
+  		res.end("Hello World\n");
+	  
 	  var intent = req.body.result.action;
 	  var mysource = req.body.result.source;
 	  console.log('Calling from :' + mysource) ;
