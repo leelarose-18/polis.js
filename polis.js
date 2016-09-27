@@ -14,12 +14,14 @@
 	
          
 	var f=0;
-	router.post('/webhook', function (req, res,f) {
+	if(f=0){
+	router.post('/webhook', function (req, res) {
 	//app.post('/webhook', function (req, res) {
 	  //var intent = req.body.result.metadata.intentName;
 		//var respstr ='Your recording for ';// + apireq.body.result.parameters.Programs +' scheduled at '+ apireq.body.result.parameters.TimeofPgm ;
 		//res.writeHead(200, {"Content-Type": "text/plain"});
   		//res.end("Hello World\n");
+		
 	  
 	  var intent = req.body.result.action;
 	  var mysource = req.body.result.source;
@@ -51,7 +53,7 @@
 	            break;
 	        default:
 	            res.json(recommendTV());
-	    }
+	    }}
 	});
 	
 	
