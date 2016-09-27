@@ -1,6 +1,6 @@
 
 	var express = require('express');
-var request = require('request');
+	var request = require('request');
 	var bodyParser = require('body-parser');
 	var servercall = require('./servicecall.js');
 	
@@ -13,12 +13,12 @@ var request = require('request');
 	
 	
 
-router.post('/webhook', function (req, res) {
+	router.post('/webhook', function (req, res) {
 	//app.post('/webhook', function (req, res) {
 	  //var intent = req.body.result.metadata.intentName;
 	  var intent = req.body.result.action;
 	  var mysource = req.body.result.source;
-	 console.log('Calling from :' + mysource) ;
+	  console.log('Calling from :' + mysource) ;
 	    switch (intent) {
 	        case "welcome":
 	             res.json(chatInitiate());
@@ -78,7 +78,7 @@ function recommendTVNew(callback) {
 	         source: "Zero Service - app_zero.js" 
 	     }); 
 	 } 
-……………//
+
 	
 	
 	
