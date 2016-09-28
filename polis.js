@@ -57,7 +57,7 @@
 	    }}
 		else
 		{res.json(recommendTV());
-		f=1;}
+		f=0;}
 	}
 	
 	
