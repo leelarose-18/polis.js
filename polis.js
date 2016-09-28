@@ -7,10 +7,10 @@
 	var app = express();
 	app.use(bodyParser.urlencoded({ extended: true }));
 	app.use(bodyParser.json());
-	app1.use(bodyParser.urlencoded({ extended: true }));
-	app1.use(bodyParser.json());
-	newfunction.use(bodyParser.urlencoded({ extended: true }));
-	newfunction.use(bodyParser.json());
+	//app1.use(bodyParser.urlencoded({ extended: true }));
+	//app1.use(bodyParser.json());
+	//newfunction.use(bodyParser.urlencoded({ extended: true }));
+	//newfunction.use(bodyParser.json());
 	
 	var PORT = process.env.PORT || 9000;
 	
@@ -33,8 +33,7 @@
 	  console.log('Calling from :' + mysource) ;
 	    switch (intent) {
 	        case "welcome":
-	             
-		    res.json(chatInitiate());
+	            res.json(chatInitiate());
 	            break;
 	        case "Billing":
 	            res.json(billInquiry());
