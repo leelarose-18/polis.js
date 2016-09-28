@@ -25,13 +25,13 @@
 		//res.writeHead(200, {"Content-Type": "text/plain"});
   		//res.end("Hello World\n");
 		
-	  
+	  var res1=newfunction.chatInitiate1();
 	  var intent = req.body.result.action;
 	  var mysource = req.body.result.source;
 	  console.log('Calling from :' + mysource) ;
 	    switch (intent) {
 	        case "welcome":
-	            res.newfunction.json(chatInitiate1());
+	            res.json(res1);
 	            break;
 	        case "Billing":
 	            res.json(billInquiry());
