@@ -29,7 +29,7 @@
 	    switch (intent) {
 	        case "welcome":
 	             res1.json(chatInitiate());
-		     res2.json(chatInitiate());
+		     //res2.json(chatInitiate());
 	            break;
 	        case "Billing":
 	            res.json(billInquiry());
