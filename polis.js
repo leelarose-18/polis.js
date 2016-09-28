@@ -10,7 +10,7 @@
 	//app1.use(bodyParser.urlencoded({ extended: true }));
 	//app1.use(bodyParser.json());
 	//newfunction.use(bodyParser.urlencoded({ extended: true }));
-	//newfunction.use(bodyParser.json());
+	newfunction.use(bodyParser.json());
 	
 	var PORT = process.env.PORT || 9000;
 	
