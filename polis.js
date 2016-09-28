@@ -15,7 +15,7 @@
          
 	
 	
-	router.post('/webhook', function (req, res) {
+	router.post('/webhook', function (req, res1,res2) {
 	//app.post('/webhook', function (req, res) {
 	  //var intent = req.body.result.metadata.intentName;
 		//var respstr ='Your recording for ';// + apireq.body.result.parameters.Programs +' scheduled at '+ apireq.body.result.parameters.TimeofPgm ;
@@ -28,7 +28,8 @@
 	  console.log('Calling from :' + mysource) ;
 	    switch (intent) {
 	        case "welcome":
-	             res.json(chatInitiate());
+	             res1.json(chatInitiate());
+		     res2.json(chatInitiate());
 	            break;
 	        case "Billing":
 	            res.json(billInquiry());
