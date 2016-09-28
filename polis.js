@@ -3,14 +3,12 @@
 	var request = require('request');
 	var bodyParser = require('body-parser');
 	var servercall = require('./servicecall.js');
+	var newfunction = require('./newfunction.js');
 	
 	var app = express();
 	app.use(bodyParser.urlencoded({ extended: true }));
 	app.use(bodyParser.json());
-	//app1.use(bodyParser.urlencoded({ extended: true }));
-	//app1.use(bodyParser.json());
-	//newfunction.use(bodyParser.urlencoded({ extended: true }));
-	newfunction.use(bodyParser.json());
+	
 	
 	var PORT = process.env.PORT || 9000;
 	
