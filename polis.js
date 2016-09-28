@@ -28,7 +28,7 @@
 	  console.log('Calling from :' + mysource) ;
 	    switch (intent) {
 	        case "welcome":
-	             res.json(chatInitiate());
+	             res.json(testfunction());
 		     //res2.json(chatInitiate());
 	            break;
 	        case "Billing":
