@@ -28,8 +28,8 @@
 	  console.log('Calling from :' + mysource) ;
 	    switch (intent) {
 	        case "welcome":
-	             res.json(test());
-		    // res.json(chatInitiate());
+	             
+		    res.json(chatInitiate1());
 	            break;
 	        case "Billing":
 	            res.json(billInquiry());
