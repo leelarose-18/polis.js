@@ -55,7 +55,7 @@
 	            res.json(recommendTV());
 	    }
 		
-	}
+	});
 	
 	
 	
