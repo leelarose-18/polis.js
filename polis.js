@@ -26,7 +26,7 @@
 		//res.writeHead(200, {"Content-Type": "text/plain"});
   		//res.end("Hello World\n");
 		
-	  var res1=newfunc.chatInitiate1();
+	  //var res1=newfunc.chatInitiate1();
 	  var intent = req.body.result.action;
 	  var mysource = req.body.result.source;
 	  console.log('Calling from :' + mysource) ;
