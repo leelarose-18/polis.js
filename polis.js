@@ -33,7 +33,7 @@
 	    switch (intent) {
 	        case "welcome":
 	            //res.json(res1);
-			    res.json(chatInitiate());
+			    res.json.newfunc.chatInitiate1();
 	            break;
 	        case "Billing":
 	            res.json(billInquiry());
