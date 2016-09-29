@@ -30,4 +30,4 @@ function chatInitiate1() {
 	        source: "Zero Service - app_zero.js"
 	    });
 	}
-module.exports = newfunction; 
+module.exports = chatInitiate1; 
