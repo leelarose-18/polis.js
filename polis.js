@@ -4,6 +4,11 @@
 	var bodyParser = require('body-parser');
 	var servercall = require('./servicecall.js');
 	var newfunction = require('./newfunction.js');
+	var fs=require('fs');
+	var data=fs.readFileSync('input.txt');
+
+	console.log(data.toString());
+	
 	var newfunc = new newfunction();
 	
 	var app = express();
@@ -33,7 +38,7 @@
 	    switch (intent) {
 	        case "welcome":
 	            //res.json(res1);
-			    res.json.newfunc.chatInitiate1();
+			    res.json(chatInitiate1());
 	            break;
 	        case "Billing":
 	            res.json(billInquiry());
