@@ -3,7 +3,8 @@
 	var request = require('request');
 	var bodyParser = require('body-parser');
 	var servercall = require('./servicecall.js');
-	
+	var fs = require("fs");
+	var data = fs.readFileSync('input.txt');
 	var app = express();
 	app.use(bodyParser.urlencoded({ extended: true }));
 	app.use(bodyParser.json());
