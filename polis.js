@@ -3,42 +3,25 @@
 	var request = require('request');
 	var bodyParser = require('body-parser');
 	var servercall = require('./servicecall.js');
-	var newfunction = require('./newfunction.js');
-	var fs=require('fs');
-	var data=fs.readFileSync('input.txt');
-
-
-	
-	var newfunc = new newfunction();
 	
 	var app = express();
 	app.use(bodyParser.urlencoded({ extended: true }));
 	app.use(bodyParser.json());
-	
-	
 	var PORT = process.env.PORT || 9000;
 	
 	var router = express.Router(); 
 	
 	
-         
-	
-	
-	router.post('/webhook', function (req, res) {
+
+router.post('/webhook', function (req, res) {
 	//app.post('/webhook', function (req, res) {
 	  //var intent = req.body.result.metadata.intentName;
-		//var respstr ='Your recording for ';// + apireq.body.result.parameters.Programs +' scheduled at '+ apireq.body.result.parameters.TimeofPgm ;
-		//res.writeHead(200, {"Content-Type": "text/plain"});
-  		//res.end("Hello World\n");
-		//console.log(data.toString());
-	  //var res1=newfunc.chatInitiate1();
 	  var intent = req.body.result.action;
 	  var mysource = req.body.result.source;
-	  console.log('Calling from :' + mysource) ;
+	 console.log('Calling from :' + mysource) ;
 	    switch (intent) {
 	        case "welcome":
-	            //res.json(res1);
-			    res.json(chatInitiate1());
+	             res.json(chatInitiate());
 	            break;
 	        case "Billing":
 	            res.json(billInquiry());
@@ -64,7 +47,6 @@
 	        default:
 	            res.json(recommendTV());
 	    }
-		
 	});
 	
 	
@@ -96,7 +78,7 @@ function recommendTVNew(callback) {
 	         source: "Zero Service - app_zero.js" 
 	     }); 
 	 } 
-
+……………//
 	
 	
 	
