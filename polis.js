@@ -30,7 +30,7 @@
 		//var respstr ='Your recording for ';// + apireq.body.result.parameters.Programs +' scheduled at '+ apireq.body.result.parameters.TimeofPgm ;
 		//res.writeHead(200, {"Content-Type": "text/plain"});
   		//res.end("Hello World\n");
-		console.log(data.toString());
+		//console.log(data.toString());
 	  //var res1=newfunc.chatInitiate1();
 	  var intent = req.body.result.action;
 	  var mysource = req.body.result.source;
