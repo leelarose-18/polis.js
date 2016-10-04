@@ -3,8 +3,8 @@
 	var request = require('request');
 	var bodyParser = require('body-parser');
 	var servercall = require('./servicecall.js');
-	var fs = require("fs");
-	var data = fs.readFileSync('input.txt');
+	//var fs = require("fs");
+	//var data = fs.readFileSync('input.txt');
 	var app = express();
 	app.use(bodyParser.urlencoded({ extended: true }));
 	app.use(bodyParser.json());
@@ -14,13 +14,13 @@
 	
 	
 
-//router.post('/webhook', function (req, res) {
-	router.post('/webhook', function (res1) {
+router.post('/webhook', function (req, res) {
+	//router.post('/webhook', function (res1) {
 	//app.post('/webhook', function (req, res) {
 	  //var intent = req.body.result.metadata.intentName;
 	
-		res1.json(chatInitiate());
-	 /* var intent = req.body.result.action;
+		
+	  var intent = req.body.result.action;
 	  var mysource = req.body.result.source;
 	 console.log('Calling from :' + mysource) ;
 	    switch (intent) {
@@ -50,7 +50,7 @@
 	            break;
 	        default:
 	            res.json(recommendTV());
-	    }*/
+	    }
 	});
 	
 	
