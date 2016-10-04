@@ -18,10 +18,9 @@
 	router.post('/webhook', function (res1) {
 	//app.post('/webhook', function (req, res) {
 	  //var intent = req.body.result.metadata.intentName;
-		var res=res1;
-		res1.start(res);
-		function start(req,res){
-	  var intent = req.body.result.action;
+	
+		res1.json(chatInitiate());
+	 /* var intent = req.body.result.action;
 	  var mysource = req.body.result.source;
 	 console.log('Calling from :' + mysource) ;
 	    switch (intent) {
@@ -51,7 +50,7 @@
 	            break;
 	        default:
 	            res.json(recommendTV());
-	    }}
+	    }*/
 	});
 	
 	
