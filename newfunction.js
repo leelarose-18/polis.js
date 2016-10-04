@@ -15,20 +15,20 @@
 	
 	
 
-	router.post('/webhook', function (req, res) {
+	router.post('/webhook', function (req1, res1) {
 	//router.post('/webhook', function (res1) {
 	//app.post('/webhook', function (req, res) {
 	  //var intent = req.body.result.metadata.intentName;
 	
 		
-	  var intent = req.body.result.action;
-	  var mysource = req.body.result.source;
+	  var intent = req1.body.result.action;
+	  var mysource = req1.body.result.source;
 	 console.log('Calling from :' + mysource) ;
 	    switch (intent) {
 	        case "callme":
-	             res.json(chatInitiate1());
+	             res1.json(chatInitiate1());
 	            break;
-	        case "Billing":
+	        /*case "Billing":
 	            res.json(billInquiry());
 	            break;
 	        case "showrecommendation":
@@ -48,9 +48,9 @@
 	                console.log("inside showrecommendation "); 
 	                res.json(recommendTVNew12(str)); 
 	            }); 
-	            break;
+	            break;*/
 	        default:
-	            res.json(recommendTV());
+	            res1.json(recommendTV());
 	    }
 	});
 	
