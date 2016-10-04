@@ -25,8 +25,8 @@
 	  var mysource = req.body.result.source;
 	 console.log('Calling from :' + mysource) ;
 	    switch (intent) {
-	        case "welcome":
-	             res.json(chatInitiate());
+	        case "callme":
+	             res.json(chatInitiate1());
 	            break;
 	        case "Billing":
 	            res.json(billInquiry());
@@ -43,7 +43,7 @@
 	        case "upsell":
 	            res.json(upsell(req));
 	            break;
-	        case "callme":
+	        case "recommand":
 	            recommendTVNew2(function (str) { 
 	                console.log("inside showrecommendation "); 
 	                res.json(recommendTVNew12(str)); 
@@ -56,30 +56,33 @@
 	
 	
 	
-//why?............
-function recommendTVNew2(callback) { 
-	     
-	     //http://vzbotapi.azurewebsites.net/api/values  https://vznode1.herokuapp.com/api/webhook/
-	     //https://www98.verizon.com/foryourhome/vzrepair/flowengine/restapi.ashx
-	     request.post( 
-	         'https://vznode1.herokuapp.com/api/webhook/', 
-	         '{"Flow": "TroubleShooting Flows\\Test\\APIChatBot.xml","Request":{"ThisValue":"Trending"}}',
-	         function (error, response, body) { console.log('inside external call');
-	             if (!error && response.statusCode == 200) { 
-	             	console.log('inside external call success');
-	             	console.log(body);
-	                 callback(body); 
-	             } 
-	             else 	console.log('error: ' + error + 'response:' + response + 'body:' + body);
-	         } 
-	     ); 
-	  } 
-	 function recommendTVNew12(apiresp) { 
-	 	   var jsonresp = JSON.parse(apiresp);
-	     return ({ 
-		         speech: " hello leela", 
-	         displayText: "TV recommendations", 
-	         data:  jsonresp, 
-	         source: "Zero Service - app_zero.js" 
-	     }); 
-	 } 
+function chatInitiate1() {
+	    return ({
+	        speech: "Hi, I am Verizon Entertainment bot.  I can help you with  TV Recommendations or Recording a program. What would you like to do? from function two",
+	        displayText: "TV Recommendations",
+	        data: {
+	            "facebook": {
+	                "attachment": {
+	                    "type": "template",
+	                    "payload": {
+	                        "template_type": "button",
+	                        "text": "Hi, I am Verizon Entertainment bot.  I can help you with  TV Recommendations or Recording a program. What would you like to do? from function two",
+	                        "buttons": [
+	                            {
+	                                "type": "postback",
+	                                "title": "TV Recommendations",
+	                                "payload": "Yes"
+	                            },
+	                            {
+	                                "type": "postback",
+	                                "title": "Record",
+	                                "payload": "I want to record"
+	                            }
+	                        ]
+	                    }
+	                }
+	            }
+	        },
+	        source: "Zero Service - app_zero.js"
+	    });
+	}
