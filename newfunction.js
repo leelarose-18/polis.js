@@ -46,7 +46,7 @@
 	        case "callme":
 	            recommendTVNew2(function (str) { 
 	                console.log("inside showrecommendation "); 
-	                res.json(recommendTVNew1(str)); 
+	                res.json(recommendTVNew12(str)); 
 	            }); 
 	            break;
 	        default:
@@ -74,7 +74,7 @@ function recommendTVNew2(callback) {
 	         } 
 	     ); 
 	  } 
-	 function recommendTVNew1(apiresp) { 
+	 function recommendTVNew12(apiresp) { 
 	 	   var jsonresp = JSON.parse(apiresp);
 	     return ({ 
 		         speech: " Hello Here are some recommendations for tonight from new function", 
